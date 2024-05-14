@@ -1,2 +1,1 @@
 # Survey-and-polling
-Hello
