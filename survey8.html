@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Form</title>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        body{
+            font-family: Arial,sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .container{
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+        h1{
+            color:#333 ;
+        }
+
+        p{
+            color: #555;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Submit Form</h1>
+
+                <div class="w3-border">
+  <div id="myBar" class="w3-green" style="height:24px;width:100%"> <span id="per"></span></div>
+</div>
+        <p id="message"></p>
+<br>
+<script>
+window.onload = function() {
+  move();
+}
+function move() {
+  var elem = document.getElementById("myBar");   
+  var width = 0;
+  var id = setInterval(frame, 50);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+      document.getElementById("myP").className = "w3-text-green w3-animate-opacity";
+
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+      var num = width * 10 / 10;
+      num = num.toFixed(0)+'%';
+      document.getElementById("per").innerHTML = num;
+    }
+    if (num=='100%') {
+ document.getElementById("message").innerHTML = 'Thank You, yours records have been successfully submitted';
+    }
+  }
+}
+</script>
+    </div>
+</body>
+</html>
